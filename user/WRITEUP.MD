@@ -1,0 +1,1 @@
+Created a new inode type: T_SYMLINK, and a symlin(target, linkpath) syscall that creates a symlink inode and stores the target path in its data blocks. I modified the sys_open function to detect symlink nodes, read the stored target and follow the chain with a depth of 10 tp prevent infinite cycles. 
